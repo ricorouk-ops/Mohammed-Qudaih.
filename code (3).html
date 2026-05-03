@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="rtl" lang="ar"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#dae2fd",
+                        "on-primary-fixed": "#131b2e",
+                        "surface-container-high": "#272a2c",
+                        "surface-bright": "#363a3b",
+                        "on-error-container": "#ffdad6",
+                        "on-primary": "#283044",
+                        "surface-variant": "#323537",
+                        "surface-container-lowest": "#0b0f10",
+                        "surface-container": "#1d2022",
+                        "on-tertiary-fixed": "#0d1c2f",
+                        "on-error": "#690005",
+                        "on-secondary-container": "#dab36a",
+                        "secondary-fixed": "#ffdea5",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "on-surface": "#e0e3e5",
+                        "primary": "#bec6e0",
+                        "primary-fixed-dim": "#bec6e0",
+                        "on-tertiary-fixed-variant": "#3a485c",
+                        "on-primary-container": "#798098",
+                        "inverse-primary": "#565e74",
+                        "surface-container-highest": "#323537",
+                        "on-tertiary-container": "#738298",
+                        "background": "#101415",
+                        "secondary": "#e9c176",
+                        "on-secondary-fixed": "#261900",
+                        "secondary-container": "#604403",
+                        "surface-tint": "#bec6e0",
+                        "inverse-on-surface": "#2d3133",
+                        "tertiary-fixed": "#d5e3fd",
+                        "tertiary-container": "#09182a",
+                        "primary-container": "#0f172a",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "tertiary-fixed-dim": "#b9c7e0",
+                        "on-surface-variant": "#c6c6cd",
+                        "outline": "#909097",
+                        "inverse-surface": "#e0e3e5",
+                        "surface": "#101415",
+                        "surface-container-low": "#191c1e",
+                        "on-background": "#e0e3e5",
+                        "tertiary": "#b9c7e0",
+                        "error-container": "#93000a",
+                        "secondary-fixed-dim": "#e9c176",
+                        "outline-variant": "#45464d",
+                        "on-tertiary": "#233144",
+                        "error": "#ffb4ab",
+                        "surface-dim": "#101415",
+                        "on-secondary": "#412d00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "48px",
+                        "section-gap": "80px",
+                        "gutter": "24px",
+                        "unit": "4px",
+                        "margin-mobile": "16px",
+                        "container-max": "1200px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Manrope"],
+                        "headline-lg": ["Manrope"],
+                        "headline-xl": ["Manrope"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "headline-xl": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-surface {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid #334155;
+        }
+        .amber-glow {
+            box-shadow: 0 0 20px rgba(233, 193, 118, 0.3);
+        }
+        .bg-mesh {
+            background-image: radial-gradient(at 0% 0%, rgba(96, 68, 3, 0.15) 0, transparent 50%), 
+                              radial-gradient(at 100% 100%, rgba(15, 23, 42, 0.2) 0, transparent 50%);
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary selection:text-on-secondary selection:bg-opacity-30 bg-mesh min-h-screen">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#0F172A]/80 backdrop-blur-lg border-b border-slate-700/50 shadow-2xl shadow-blue-900/20">
+<div class="flex flex-row-reverse justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto font-manrope antialiased tracking-tight">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-secondary amber-glow">
+<img alt="Mohammed Louay Qadih" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0ugLeCUEd_zlM2aSWpVXxsu76lydF0JeepYRYLnYz3Hgrzd5gDEdI5UlV4L7_pK7LictEt1hHL_5_GlCt0vLdG3kqQKBOaUQGjujAjYnHj3lPApxpogrtjzPQKfot4kR6m8MBa1iMcoqJeHneTjC00Y1qcX8TUUvvUkzrXkBAn7eeiq-bvQoDEnLNLPz3ypoaM3poHSPVXGe3xkEQ4-Js8ksOpwRjOjTX0xhEt7dNzYll55Ic0sp87CiZol9Dz0yGsGU6SJx65xZ"/>
+</div>
+<h1 class="text-xl font-bold text-amber-500 tracking-wider">Mohammed Qudaih</h1>
+</div>
+<div class="hidden md:flex flex-row-reverse gap-8">
+<a class="text-amber-500 border-b-2 border-amber-500 pb-1" href="#">الرئيسية</a>
+<a class="text-slate-300 hover:text-amber-400 transition-colors" href="#portfolio">المشاريع</a>
+<a class="text-slate-300 hover:text-amber-400 transition-colors" href="#">الخبرات</a>
+<a class="text-slate-300 hover:text-amber-400 transition-colors" href="#">المهارات</a>
+</div>
+<button class="bg-secondary text-on-secondary px-6 py-2 rounded-lg font-label-sm active:scale-95 transition-transform hover:shadow-[0_0_15px_rgba(233,193,118,0.4)]">
+                اتصل بي
+            </button>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-section-gap flex flex-col md:flex-row-reverse items-center justify-between gap-12">
+<div class="w-full md:w-1/2 flex justify-center">
+<div class="relative group">
+<div class="absolute -inset-1 bg-gradient-to-tr from-secondary to-transparent rounded-full blur opacity-40 group-hover:opacity-70 transition duration-1000 group-hover:duration-200"></div>
+<div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-secondary amber-glow">
+<img alt="Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0ugLeCUEd_zlM2aSWpVXxsu76lydF0JeepYRYLnYz3Hgrzd5gDEdI5UlV4L7_pK7LictEt1hHL_5_GlCt0vLdG3kqQKBOaUQGjujAjYnHj3lPApxpogrtjzPQKfot4kR6m8MBa1iMcoqJeHneTjC00Y1qcX8TUUvvUkzrXkBAn7eeiq-bvQoDEnLNLPz3ypoaM3poHSPVXGe3xkEQ4-Js8ksOpwRjOjTX0xhEt7dNzYll55Ic0sp87CiZol9Dz0yGsGU6SJx65xZ"/>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2 text-center md:text-right space-y-6">
+<h2 class="font-headline-xl text-headline-xl text-on-background leading-tight">
+                    محمد لؤي قديح
+                </h2>
+<p class="font-headline-md text-headline-md text-secondary max-w-xl">
+                    متخصص في تقديم حلول رقمية وإبداعية متكاملة
+                </p>
+<div class="pt-4">
+<button class="bg-secondary text-on-secondary px-10 py-4 rounded-xl font-headline-md hover:bg-secondary/90 transition-all hover:shadow-[0_0_25px_rgba(233,193,118,0.2)]">
+                        ابدأ مشروعك الآن
+                    </button>
+</div>
+</div>
+</section>
+<!-- Mission Statement -->
+<section class="bg-surface-container py-16 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-secondary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop text-center relative z-10">
+<h3 class="font-headline-lg text-headline-lg text-on-surface italic opacity-90">
+                    "نحن هنا لتحويل أفكاركم إلى واقع رقمي ملموس."
+                </h3>
+</div>
+</section>
+<!-- Services Section (Bento Grid) -->
+<section class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
+<div class="mb-12 text-center md:text-right">
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-4">خدماتنا المتميزة</h2>
+<div class="h-1 w-24 bg-secondary mx-auto md:mr-0"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Web Dev (Large) -->
+<div class="md:col-span-2 glass-surface p-8 rounded-2xl hover:border-secondary/50 transition-all group">
+<div class="flex flex-col h-full justify-between gap-8">
+<div>
+<span class="material-symbols-outlined text-secondary text-5xl mb-4" data-icon="terminal">terminal</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">برمجة المواقع والتطبيقات</h3>
+<p class="text-on-surface-variant font-body-md max-w-lg">بناء أنظمة برمجية متطورة تخدم أهداف أعمالكم بدقة عالية وسرعة فائقة.</p>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface-variant text-secondary font-label-sm px-3 py-1 rounded-full border border-slate-700">Full Stack</span>
+<span class="bg-surface-variant text-secondary font-label-sm px-3 py-1 rounded-full border border-slate-700">Mobile Apps</span>
+</div>
+</div>
+</div>
+<!-- UI/UX -->
+<div class="glass-surface p-8 rounded-2xl hover:border-secondary/50 transition-all">
+<span class="material-symbols-outlined text-secondary text-5xl mb-4" data-icon="grid_view">grid_view</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">تصميم تجربة المستخدم</h3>
+<p class="text-on-surface-variant font-body-md">تصميم واجهات تجمع بين الجمالية وسهولة الاستخدام لضمان أفضل تفاعل.</p>
+</div>
+<!-- Graphic Design -->
+<div class="glass-surface p-8 rounded-2xl hover:border-secondary/50 transition-all">
+<span class="material-symbols-outlined text-secondary text-5xl mb-4" data-icon="palette">palette</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">التصميم الجرافيكي</h3>
+<p class="text-on-surface-variant font-body-md">هوية بصرية تعكس احترافية مشروعك وتترك انطباعاً دائماً.</p>
+</div>
+<!-- Motion Graphics (Wide) -->
+<div class="md:col-span-2 glass-surface p-8 rounded-2xl hover:border-secondary/50 transition-all flex flex-col md:flex-row gap-8 items-center">
+<div class="md:w-1/2">
+<span class="material-symbols-outlined text-secondary text-5xl mb-4" data-icon="movie_filter">movie_filter</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">الموشن جرافيك</h3>
+<p class="text-on-surface-variant font-body-md">تحويل البيانات والمعلومات المعقدة إلى فيديوهات جذابة وسهلة الفهم.</p>
+</div>
+<div class="md:w-1/2 w-full h-32 bg-surface-variant rounded-xl flex items-center justify-center border border-slate-700">
+<span class="material-symbols-outlined text-secondary/30 text-6xl" data-icon="play_circle">play_circle</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Section -->
+<section class="bg-surface-container-low py-section-gap" id="portfolio">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="mb-12 text-center md:text-right">
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-4">معرض الأعمال</h2>
+<div class="h-1 w-24 bg-secondary mx-auto md:mr-0"></div>
+<p class="text-on-surface-variant mt-4 font-body-md">نظرة على بعض المشاريع التي قمنا بتنفيذها مؤخراً</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Project 1 -->
+<div class="group relative overflow-hidden rounded-2xl aspect-video bg-surface-container-highest border border-slate-700/50 hover:border-secondary/50 transition-all">
+<img alt="Digital Solution" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3hS4khkoE90eaj37YFUcW5PO9OdohdPzyEsuuP60pfILh4fbu7uPLDMR0g0glumOTHuvYzCwaR0csEClBXEgkW050K9Rjmt_fGanw4IlHI2mOAt8irWPxexF3jH01beBNvIOyJ4OdEEue6yNEbJ3Q7q4MVL3N_ZyhUbeVU1PUWJH-xmXEiyg4m9aRqy3vY4opENmUTFHq3DewXjz0YY_QQDgTEoBSVWAlphm_uV6HjmsTsPGbHzp_of-u5hnuPLpfdUbxMNz58A"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent flex flex-col justify-end p-6 translate-y-4 group-hover:translate-y-0 transition-transform">
+<span class="text-secondary font-label-sm mb-1">حلول رقمية</span>
+<h4 class="text-on-surface font-headline-md">منصة التجارة المتكاملة</h4>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="group relative overflow-hidden rounded-2xl aspect-video bg-surface-container-highest border border-slate-700/50 hover:border-secondary/50 transition-all">
+<img alt="UI/UX Design" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1Q0oPpObEDHLzOHPVQhYfiN0__7pmiuIg_OKWiLtX3eLf05oAdZEc_II1UFy8ifkrJGHFsC0dSJ4OZGzTPl5ML3Kl9_dYGYQDOMomCDryZrp2iuVjoBL5V_2_2r2TlulCj0cxVIjylRU3PAYMMEuiztlyj8y_7TbAG_Qn20daqz2xyKKyrKC0eEzaFIa5n5XNj1bBMCKA6yOVa8tFrDYVBZD47oMM0LO5CQEkcWEO1VQHeAzZRSFvyWgx71rzZUTW7gsBWuAh1g"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent flex flex-col justify-end p-6 translate-y-4 group-hover:translate-y-0 transition-transform">
+<span class="text-secondary font-label-sm mb-1">UI/UX</span>
+<h4 class="text-on-surface font-headline-md">تطبيق المحفظة الذكية</h4>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="group relative overflow-hidden rounded-2xl aspect-video bg-surface-container-highest border border-slate-700/50 hover:border-secondary/50 transition-all">
+<img alt="Graphic Design" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeyIRjJWpoWFM2_k-v2EMFVs7of66oAiQJpJHt6qa-ZhSvnI32aBl5s51QJ0ylsVGIa8ARWWM_DtOh0-sqnJ3hAuj9SrOeZ3gdwkw4IcqcH7y2Xz8cvEHstfMLsqK2D2vvq1tXmwjcQWXFp7BubRnA0WsCIgkMddJW-ZS3gEtkyM3dx_eVr71XUamLeFVT4rqByjqra8kZ_vweFTzUmem4q6RojQPN5G8kJWI9I1_1cNCbUct1XxEUUhvatKV53HSPeEWmHcHvQA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent flex flex-col justify-end p-6 translate-y-4 group-hover:translate-y-0 transition-transform">
+<span class="text-secondary font-label-sm mb-1">هوية بصرية</span>
+<h4 class="text-on-surface font-headline-md">العلامة التجارية لشركة تيك</h4>
+</div>
+</div>
+<!-- Project 4 -->
+<div class="group relative overflow-hidden rounded-2xl aspect-video bg-surface-container-highest border border-slate-700/50 hover:border-secondary/50 transition-all">
+<img alt="Mobile App" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClJV714m8mf541g1TC1MigayTehSyPZURYnq2Evpqgh6FCu-Rr2N2MK8DPpL_NZ4SRps1-Sk1Jzk0mkjfQtNwZYtZSstemBQUQ8mXECOn2tBZWp9ReOTniTe_KiVW_fI-yei9hBzQISyjCNiDGL10oQ-ZfSp8udLziJlkAujMBgg-kRvxG-D_N_YFl_ZmsBMkkdS7_HXy8U97VcthqMM0RivNWiro3sTm90eY44gWZwsZYEV-MowA3MJrWWNzBef0fphn7DPIV3w"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent flex flex-col justify-end p-6 translate-y-4 group-hover:translate-y-0 transition-transform">
+<span class="text-secondary font-label-sm mb-1">تطبيقات الجوال</span>
+<h4 class="text-on-surface font-headline-md">نظام إدارة التوصيل</h4>
+</div>
+</div>
+<!-- Project 5 -->
+<div class="group relative overflow-hidden rounded-2xl aspect-video bg-surface-container-highest border border-slate-700/50 hover:border-secondary/50 transition-all">
+<img alt="Motion Graphics" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAf_-R0lCJNhDVE1G48BYYNNKXxTnCwc1vZTJOCr8LAGM9dsrsz0BoDh5D9LsBqtL5Wp3Sup8e8yD-i8tzpYh87SbYjCFy42GMFD3NEvzNqmiC7drbdZ4r012A9OZp7gPQHv7f28E2ONLUdzQUqCFh_3HyOlwZY4KFMguL9m8tL3RN2Ff9g_AjIe1ffKFhOyifxuzKX7f1xOzx88PWbYGQMslSqV-xw9AXzCzoi596egsmWKLgCRshI-h-v-syD1c6nKNyo11DDIQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent flex flex-col justify-end p-6 translate-y-4 group-hover:translate-y-0 transition-transform">
+<span class="text-secondary font-label-sm mb-1">موشن جرافيك</span>
+<h4 class="text-on-surface font-headline-md">فيديو تعريفي للتقنية</h4>
+</div>
+</div>
+<!-- Project 6 -->
+<div class="group relative overflow-hidden rounded-2xl aspect-video bg-surface-container-highest border border-slate-700/50 hover:border-secondary/50 transition-all flex items-center justify-center">
+<div class="text-center p-6">
+<span class="material-symbols-outlined text-secondary text-5xl mb-2" data-icon="add_circle">add_circle</span>
+<h4 class="text-on-surface font-headline-md">المزيد من المشاريع</h4>
+<button class="text-secondary mt-2 underline hover:text-amber-400 transition-colors">تصفح الكل</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-section-gap text-center">
+<div class="bg-primary-container p-12 rounded-3xl border border-slate-800 shadow-2xl relative overflow-hidden">
+<div class="absolute -bottom-10 -right-10 w-48 h-48 bg-secondary/10 rounded-full blur-3xl"></div>
+<h2 class="font-headline-xl text-headline-xl text-on-background mb-8">تواصل معنا لمناقشة مشروعك القادم</h2>
+<div class="flex flex-col sm:flex-row-reverse gap-4 justify-center">
+<a class="bg-secondary text-on-secondary px-8 py-4 rounded-xl font-headline-md hover:bg-secondary/90 transition-all inline-block" href="https://wa.me/+970597159807" rel="noopener noreferrer" target="_blank">تواصل الآن</a>
+<a class="border border-secondary text-secondary px-8 py-4 rounded-xl font-headline-md hover:bg-secondary/10 transition-all" href="https://t.me/Mohammed_L_Deisgn" rel="noopener noreferrer" target="_blank">عرض أعمالنا</a><a class="border border-secondary text-secondary px-8 py-4 rounded-xl font-headline-md hover:bg-secondary/10 transition-all flex items-center justify-center gap-2" href="mailto:mohammedxxloay@gmail.com" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-secondary">mail</span><span>mohammedxxloaygmail.com</span></a>
+<a class="border border-secondary text-secondary px-8 py-4 rounded-xl font-headline-md hover:bg-secondary/10 transition-all flex items-center justify-center gap-2" href="https://www.linkedin.com/in/mohammed-qudaih-377380407" rel="noopener noreferrer" target="_blank">
+<svg class="w-5 h-5 fill-secondary" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+<span>LinkedIn</span>
+</a></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0F172A] w-full py-12 border-t border-slate-800 mt-section-gap">
+<div class="flex flex-col md:flex-row-reverse justify-between items-center px-8 max-w-7xl mx-auto gap-6 font-manrope text-sm">
+<div class="flex flex-col items-center md:items-end gap-2">
+<span class="text-lg font-semibold text-amber-500">Mohammed Qudaih</span>
+<p class="text-slate-400">© 2026 جميع الحقوق محفوظة لـ Mohammed Qudaih</p>
+</div>
+<div class="flex flex-row-reverse gap-8 text-slate-400">
+<a class="hover:text-amber-400 transition-colors focus:ring-2 focus:ring-amber-500 rounded px-2" href="#portfolio">المشاريع</a>
+<a class="hover:text-amber-400 transition-colors focus:ring-2 focus:ring-amber-500 rounded px-2" href="#">الخبرات</a>
+<a class="hover:text-amber-400 transition-colors focus:ring-2 focus:ring-amber-500 rounded px-2" href="#">المهارات</a>
+<a class="hover:text-amber-400 transition-colors focus:ring-2 focus:ring-amber-500 rounded px-2" href="#">تواصل معي</a>
+</div>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center hover:bg-secondary hover:text-on-secondary transition-all text-secondary" href="#">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center hover:bg-secondary hover:text-on-secondary transition-all text-secondary" href="#">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center hover:bg-secondary hover:text-on-secondary transition-all text-secondary" href="https://www.linkedin.com/in/mohammed-qudaih-377380407" rel="noopener noreferrer" target="_blank">
+<svg class="w-5 h-5 fill-secondary" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</a><a class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center hover:bg-secondary hover:text-on-secondary transition-all text-secondary" href="tel:+970597159807" title="+970597159807"><span class="material-symbols-outlined">call</span></a></div>
+</div>
+</footer>
+</body></html>
